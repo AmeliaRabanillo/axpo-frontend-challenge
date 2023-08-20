@@ -4,13 +4,18 @@ import {DataGrid, GridColDef, GridRowSelectionModel} from '@mui/x-data-grid';
 import {SearchTypeEnum} from "../utils/constants";
 import {Radio} from "@mui/material";
 import {TABLE_DATA} from "../utils/table_data_constant";
+// @ts-ignore
+import styled from "styled-components";
 import Search from "@mui/icons-material/Search";
 import {PrimaryButton} from "../components/primary-button";
+import {H2} from "../styled/headings";
+import {ButtonContainer} from "../components/button-container";
 import BackButton from "../components/back-button";
+import HeaderContainer from "../components/header-container";
 
 export type tableProps = {
     type: SearchTypeEnum,
-}
+}//ToDo put types in types file
 
 const DataTablePage = (props: tableProps) => {
     const {type} = props;
@@ -61,8 +66,10 @@ const DataTablePage = (props: tableProps) => {
     //ToDO remove cell outline when selecting row
     return (
         <div>
-            <BackButton goToUrl={'/'}/>
-            <h2>Selected {type}</h2>
+            <HeaderContainer>
+                <BackButton goToUrl={'/'}/>
+                <H2>Selected {type}</H2>
+            </HeaderContainer>
 
             <DataGrid
                 rows={rows}
@@ -79,7 +86,9 @@ const DataTablePage = (props: tableProps) => {
                 }}
                 hideFooterSelectedRowCount={true}
             />
-            <PrimaryButton onClick={handleClick}><span>Search</span><Search/></PrimaryButton>
+            <ButtonContainer>
+                <PrimaryButton onClick={handleClick}><span>Search</span><Search/></PrimaryButton>
+            </ButtonContainer>
         </div>
     );
 }

@@ -7,6 +7,8 @@ import 'react-json-view-lite/dist/index.css';
 import getDroneRestrictions from "../services/getDroneRestrictions";
 import getPopulationDensity from "../services/getPopulationDensity";
 import BackButton from "../components/back-button";
+import {H2, H3} from "../styled/headings";
+import HeaderContainer from "../components/header-container";
 
 const ResultsPage = (props: tableProps) => {
     const navigate = useNavigate();
@@ -49,11 +51,12 @@ const ResultsPage = (props: tableProps) => {
 
     return (
         <div>
-            <BackButton goToUrl={`/${type}`}/>
-            <h1>Here are your results</h1>
-            <h3>{type}</h3>
-            <h4>Latitude:{state.latitude}</h4>
-            <h4>Longitude:{state.longitude}</h4>
+            <HeaderContainer>
+                <BackButton goToUrl={`/${type}`}/>
+                <H2>Here are your results for {type}</H2>
+            </HeaderContainer>
+            <H3>Latitude:{state.latitude}</H3>
+            <H3>Longitude:{state.longitude}</H3>
             {errorMsg
                 ? <p>{errorMsg}</p>
                 : <JsonView data={data} shouldInitiallyExpand={allExpanded} style={defaultStyles}/>}

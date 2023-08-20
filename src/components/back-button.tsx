@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 
 interface BackButtonProps {
     goToUrl: string;
-}
+}//ToDo add props to types file
 
 const BackButton = (props: BackButtonProps) => {
     const {goToUrl} = props
