@@ -1,4 +1,4 @@
-enum SearchType {
+enum SearchTypeEnum {
     POPULATION_DENSITY = 'population_density',
     DRONE_RESTRICTION = 'drone_restriction',
 }
@@ -9,7 +9,19 @@ enum RoutesEnum {
     DRONE_RESTRICTION_TABLE_PAGE = '/drone_restriction',
 }
 
+const MAP_SERVER_URL = 'https://api3.geo.admin.ch/rest/services/api/MapServer/identify';
+const DRONE_RESTRICTIONS_LAYER = 'all:ch.bazl.einschraenkungen-drohnen';
+const POPULATION_DENSITY_LAYER = 'all:ch.bfs.volkszaehlung-bevoelkerungsstatistik_einwohner';
+const MAP_SERVER_GEOMETRY_TYPE = 'esriGeometryPoint';
+const MAP_SERVER_SR = '4326';
+
 export {
-    SearchType,
+    SearchTypeEnum,
     RoutesEnum,
+
+    MAP_SERVER_URL,
+    DRONE_RESTRICTIONS_LAYER,
+    POPULATION_DENSITY_LAYER,
+    MAP_SERVER_GEOMETRY_TYPE,
+    MAP_SERVER_SR,
 }

@@ -2,11 +2,11 @@ import {useNavigate} from "react-router-dom";
 import {create_data_array} from "../utils/get-rows";
 import * as React from 'react';
 import {DataGrid, GridColDef, GridRowSelectionModel} from '@mui/x-data-grid';
-import {SearchType} from "../utils/constants";
+import {SearchTypeEnum} from "../utils/constants";
 import {Radio} from "@mui/material";
 
 export type tableProps = {
-    type: SearchType,
+    type: SearchTypeEnum,
 }
 //"ID;Name;Type;Latitude;Longitude"
 
