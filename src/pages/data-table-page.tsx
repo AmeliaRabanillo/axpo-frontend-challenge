@@ -1,9 +1,9 @@
 import {useNavigate} from "react-router-dom";
-import {create_data_array} from "../utils/get-rows";
 import * as React from 'react';
 import {DataGrid, GridColDef, GridRowSelectionModel} from '@mui/x-data-grid';
 import {SearchTypeEnum} from "../utils/constants";
 import {Radio} from "@mui/material";
+import {TABLE_DATA} from "../utils/table_data_constant";
 
 export type tableProps = {
     type: SearchTypeEnum,
@@ -13,7 +13,6 @@ export type tableProps = {
 const DataTablePage = (props: tableProps) => {
     const {type} = props;
     const navigate = useNavigate();
-    const raw_rows = create_data_array();
 
     const columns: GridColDef[] = [
         {field: 'id', headerName: 'ID', flex: 1,},
@@ -23,7 +22,7 @@ const DataTablePage = (props: tableProps) => {
         {field: 'longitude', headerName: 'Longitude', flex: 1,},
     ];
 
-    const rows = raw_rows.map(row => {
+    const rows = TABLE_DATA.map(row => {
         return {
             id: row[0],
             name: row[1],
@@ -38,6 +37,19 @@ const DataTablePage = (props: tableProps) => {
 
     const handleClick = () => {
         const selectedRow = rows.find(r => r.id === selectionModel[0]);
+
+        // for (var i = 0; i < rows.length; i++) {
+        //     const cur = i;
+        //     getDroneRestrictions({
+        //         latitude: rows[i].latitude,
+        //         longitude: rows[i].longitude,
+        //     }).then(data => {
+        //         // @ts-ignore
+        //         if (data.results.length)
+        //             console.log(rows[cur].id)
+        //     });
+        // }
+
 
         if (selectedRow)
             navigate(`/${type}/${selectedRow.id}`, {
