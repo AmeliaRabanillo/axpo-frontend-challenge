@@ -1,8 +1,9 @@
 import {useNavigate} from "react-router-dom";
 import {create_data_array} from "../utils/get-rows";
 import * as React from 'react';
-import {DataGrid, GridColDef} from '@mui/x-data-grid';
+import {DataGrid, GridColDef, GridRowSelectionModel} from '@mui/x-data-grid';
 import {SearchType} from "../utils/constants";
+import {Radio} from "@mui/material";
 
 export type tableProps = {
     type: SearchType,
@@ -32,9 +33,23 @@ const DataTablePage = (props: tableProps) => {
         };
     });
 
+    const [selectionModel, setSelectionModel] = React.useState<GridRowSelectionModel>([rows[0].id]);
+    //ToDo try to use the entire row as a selection model and not only the id so no filtering is needed when going to search page
+
+
     const handleClick = () => {
-        console.log('clicked!!!')
+        const selectedRow = rows.find(r => r.id === selectionModel[0]);
+        console.log(selectedRow)
     }
+
+    columns.unshift({
+        field: "radiobutton",
+        headerName: "",
+        width: 80,
+        sortable: false,
+        renderCell: (params) =>
+            (<Radio checked={selectionModel[0] === params.id} value={params.id}/>)
+    });
 
     //ToDO remove cell outline when selecting row
     return (
@@ -51,6 +66,11 @@ const DataTablePage = (props: tableProps) => {
                     },
                 }}
                 pageSizeOptions={[10, 15, 20]}
+                rowSelectionModel={selectionModel}
+                onRowSelectionModelChange={(newSelectionModel) => {
+                    console.log(newSelectionModel)
+                    setSelectionModel(newSelectionModel)
+                }}
                 hideFooterSelectedRowCount={true}
             />
 
