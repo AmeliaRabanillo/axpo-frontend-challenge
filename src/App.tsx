@@ -7,25 +7,25 @@ import ResultsPage from "./pages/results-page";
 // @ts-ignore
 import styled, {ThemeProvider} from "styled-components";
 import {baseTheme} from "./styled/themes/base-theme";
+import GlobalStyle from "./styled/global-styles";
 
 function App() {
     return (
         <ThemeProvider theme={baseTheme}>
-            <div>
-                <Routes>
-                    <Route path={RoutesEnum.START_PAGE} element={<StartHeader/>}/>
+            <GlobalStyle/>
+            <Routes>
+                <Route path={RoutesEnum.START_PAGE} element={<StartHeader/>}/>
 
-                    <Route path={RoutesEnum.POPULATION_DENSITY_TABLE_PAGE}
-                           element={<DataTablePage type={SearchTypeEnum.POPULATION_DENSITY}/>}/>
-                    <Route path={`/${RoutesEnum.POPULATION_DENSITY_TABLE_PAGE}/:id`}
-                           element={<ResultsPage type={SearchTypeEnum.POPULATION_DENSITY}/>}/>
+                <Route path={RoutesEnum.POPULATION_DENSITY_TABLE_PAGE}
+                       element={<DataTablePage type={SearchTypeEnum.POPULATION_DENSITY}/>}/>
+                <Route path={`/${RoutesEnum.POPULATION_DENSITY_TABLE_PAGE}/:id`}
+                       element={<ResultsPage type={SearchTypeEnum.POPULATION_DENSITY}/>}/>
 
-                    <Route path={RoutesEnum.DRONE_RESTRICTION_TABLE_PAGE}
-                           element={<DataTablePage type={SearchTypeEnum.DRONE_RESTRICTION}/>}/>
-                    <Route path={`/${RoutesEnum.DRONE_RESTRICTION_TABLE_PAGE}/:id`}
-                           element={<ResultsPage type={SearchTypeEnum.DRONE_RESTRICTION}/>}/>
-                </Routes>
-            </div>
+                <Route path={RoutesEnum.DRONE_RESTRICTION_TABLE_PAGE}
+                       element={<DataTablePage type={SearchTypeEnum.DRONE_RESTRICTION}/>}/>
+                <Route path={`/${RoutesEnum.DRONE_RESTRICTION_TABLE_PAGE}/:id`}
+                       element={<ResultsPage type={SearchTypeEnum.DRONE_RESTRICTION}/>}/>
+            </Routes>
         </ThemeProvider>
     );
 }
