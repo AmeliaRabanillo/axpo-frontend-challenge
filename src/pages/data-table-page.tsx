@@ -4,11 +4,14 @@ import {DataGrid, GridColDef, GridRowSelectionModel} from '@mui/x-data-grid';
 import {SearchTypeEnum} from "../utils/constants";
 import {Radio} from "@mui/material";
 import {TABLE_DATA} from "../utils/table_data_constant";
+import KeyboardBackspace from "@mui/icons-material/KeyboardBackspace";
+import Search from "@mui/icons-material/Search";
+import {PrimaryButton} from "../components/primary-button";
+import {CircularButton} from "../components/circular-button";
 
 export type tableProps = {
     type: SearchTypeEnum,
 }
-//"ID;Name;Type;Latitude;Longitude"
 
 const DataTablePage = (props: tableProps) => {
     const {type} = props;
@@ -38,19 +41,6 @@ const DataTablePage = (props: tableProps) => {
     const handleClick = () => {
         const selectedRow = rows.find(r => r.id === selectionModel[0]);
 
-        // for (var i = 0; i < rows.length; i++) {
-        //     const cur = i;
-        //     getDroneRestrictions({
-        //         latitude: rows[i].latitude,
-        //         longitude: rows[i].longitude,
-        //     }).then(data => {
-        //         // @ts-ignore
-        //         if (data.results.length)
-        //             console.log(rows[cur].id)
-        //     });
-        // }
-
-
         if (selectedRow)
             navigate(`/${type}/${selectedRow.id}`, {
                 state: {
@@ -66,14 +56,14 @@ const DataTablePage = (props: tableProps) => {
         width: 80,
         sortable: false,
         renderCell: (params) =>
-            (<Radio checked={selectionModel[0] === params.id} value={params.id}/>)
+            (<Radio checked={selectionModel[0] === params.id} value={params.id}/>)//ToDO change radio button color
     });
 
     //ToDO remove cell outline when selecting row
     return (
         <div>
-            <button onClick={() => navigate('/')}>Back</button>
-            <h1>Selected {type}</h1>
+            <CircularButton onClick={() => navigate('/')}><KeyboardBackspace/></CircularButton>
+            <h2>Selected {type}</h2>
 
             <DataGrid
                 rows={rows}
@@ -90,8 +80,7 @@ const DataTablePage = (props: tableProps) => {
                 }}
                 hideFooterSelectedRowCount={true}
             />
-
-            <button onClick={handleClick}>Search</button>
+            <PrimaryButton onClick={handleClick}><span>Search</span><Search/></PrimaryButton>
         </div>
     );
 }
