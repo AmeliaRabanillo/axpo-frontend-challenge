@@ -51,6 +51,7 @@ const DataTablePage = (props: tableProps) => {
                     },
                 }}
                 pageSizeOptions={[10, 15, 20]}
+                hideFooterSelectedRowCount={true}
             />
 
             <button onClick={handleClick}>Search</button>
