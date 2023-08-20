@@ -4,8 +4,6 @@ import {DataGrid, GridColDef, GridRowSelectionModel} from '@mui/x-data-grid';
 import {SearchTypeEnum} from "../utils/constants";
 import {Radio} from "@mui/material";
 import {TABLE_DATA} from "../utils/table_data_constant";
-// @ts-ignore
-import styled from "styled-components";
 import Search from "@mui/icons-material/Search";
 import {PrimaryButton} from "../components/primary-button";
 import {H2} from "../styled/headings";

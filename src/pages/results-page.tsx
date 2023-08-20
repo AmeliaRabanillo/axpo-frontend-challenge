@@ -1,5 +1,5 @@
 import {tableProps} from "./data-table-page";
-import {useLocation, useNavigate} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import {SearchTypeEnum} from "../utils/constants";
 import {JsonView, allExpanded, defaultStyles} from 'react-json-view-lite';
@@ -11,7 +11,6 @@ import {H2, H3} from "../styled/headings";
 import HeaderContainer from "../components/header-container";
 
 const ResultsPage = (props: tableProps) => {
-    const navigate = useNavigate();
     const {type} = props;
     const {state} = useLocation();
     console.log(state)
