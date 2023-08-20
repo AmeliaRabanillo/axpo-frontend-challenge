@@ -14,6 +14,7 @@ const ResultsPage = (props: tableProps) => {
     console.log(state)
 
     const [data, setData] = useState<any>({});//ToDo maybe useMemo here
+    const [errorMsg, setErrorMsg] = useState('');
 
     useEffect(() => {
         //ToDo handle errors
@@ -21,12 +22,28 @@ const ResultsPage = (props: tableProps) => {
             getDroneRestrictions({
                 latitude: state.latitude,
                 longitude: state.longitude
-            }).then(data => setData(data));
+            })
+                .then(data => {
+                    setData(data);
+                    setErrorMsg('');
+                })
+                .catch(err => {
+                    alert(err.message);
+                    setErrorMsg(err.message);
+                });
         else if (type === SearchTypeEnum.POPULATION_DENSITY)
             getPopulationDensity({
                 latitude: state.latitude,
                 longitude: state.longitude
-            }).then(data => setData(data));
+            })
+                .then(data => {
+                    setData(data);
+                    setErrorMsg('');
+                })
+                .catch(err => {
+                    alert(err.message);
+                    setErrorMsg(err.message);
+                });
     }, []);
 
     return (
@@ -36,7 +53,7 @@ const ResultsPage = (props: tableProps) => {
             <h3>{type}</h3>
             <h4>Latitude:{state.latitude}</h4>
             <h4>Longitude:{state.longitude}</h4>
-            <JsonView data={data} shouldInitiallyExpand={allExpanded} style={defaultStyles}/>
+            {errorMsg ? <p>{errorMsg}</p> : <JsonView data={data} shouldInitiallyExpand={allExpanded} style={defaultStyles}/>}
         </div>
     );
 }
