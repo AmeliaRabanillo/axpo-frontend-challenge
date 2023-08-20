@@ -4,10 +4,9 @@ import {DataGrid, GridColDef, GridRowSelectionModel} from '@mui/x-data-grid';
 import {SearchTypeEnum} from "../utils/constants";
 import {Radio} from "@mui/material";
 import {TABLE_DATA} from "../utils/table_data_constant";
-import KeyboardBackspace from "@mui/icons-material/KeyboardBackspace";
 import Search from "@mui/icons-material/Search";
 import {PrimaryButton} from "../components/primary-button";
-import {CircularButton} from "../components/circular-button";
+import BackButton from "../components/back-button";
 
 export type tableProps = {
     type: SearchTypeEnum,
@@ -62,7 +61,7 @@ const DataTablePage = (props: tableProps) => {
     //ToDO remove cell outline when selecting row
     return (
         <div>
-            <CircularButton onClick={() => navigate('/')}><KeyboardBackspace/></CircularButton>
+            <BackButton goToUrl={'/'}/>
             <h2>Selected {type}</h2>
 
             <DataGrid

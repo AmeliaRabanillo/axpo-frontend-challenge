@@ -6,6 +6,7 @@ import {JsonView, allExpanded, defaultStyles} from 'react-json-view-lite';
 import 'react-json-view-lite/dist/index.css';
 import getDroneRestrictions from "../services/getDroneRestrictions";
 import getPopulationDensity from "../services/getPopulationDensity";
+import BackButton from "../components/back-button";
 
 const ResultsPage = (props: tableProps) => {
     const navigate = useNavigate();
@@ -48,12 +49,14 @@ const ResultsPage = (props: tableProps) => {
 
     return (
         <div>
-            <button onClick={() => navigate(`/${type}`)}>Back</button>
+            <BackButton goToUrl={`/${type}`}/>
             <h1>Here are your results</h1>
             <h3>{type}</h3>
             <h4>Latitude:{state.latitude}</h4>
             <h4>Longitude:{state.longitude}</h4>
-            {errorMsg ? <p>{errorMsg}</p> : <JsonView data={data} shouldInitiallyExpand={allExpanded} style={defaultStyles}/>}
+            {errorMsg
+                ? <p>{errorMsg}</p>
+                : <JsonView data={data} shouldInitiallyExpand={allExpanded} style={defaultStyles}/>}
         </div>
     );
 }
