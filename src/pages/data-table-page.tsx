@@ -36,10 +36,16 @@ const DataTablePage = (props: tableProps) => {
     const [selectionModel, setSelectionModel] = React.useState<GridRowSelectionModel>([rows[0].id]);
     //ToDo try to use the entire row as a selection model and not only the id so no filtering is needed when going to search page
 
-
     const handleClick = () => {
         const selectedRow = rows.find(r => r.id === selectionModel[0]);
-        console.log(selectedRow)
+
+        if (selectedRow)
+            navigate(`/${type}/${selectedRow.id}`, {
+                state: {
+                    latitude: selectedRow.latitude,
+                    longitude: selectedRow.longitude,
+                }
+            });
     }
 
     columns.unshift({
@@ -68,7 +74,6 @@ const DataTablePage = (props: tableProps) => {
                 pageSizeOptions={[10, 15, 20]}
                 rowSelectionModel={selectionModel}
                 onRowSelectionModelChange={(newSelectionModel) => {
-                    console.log(newSelectionModel)
                     setSelectionModel(newSelectionModel)
                 }}
                 hideFooterSelectedRowCount={true}

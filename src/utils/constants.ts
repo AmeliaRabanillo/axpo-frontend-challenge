@@ -1,6 +1,6 @@
 enum SearchType {
-    POPULATION_DENSITY = 'Population Density',
-    DRONE_RESTRICTION = 'Drone Restrictions',
+    POPULATION_DENSITY = 'population_density',
+    DRONE_RESTRICTION = 'drone_restriction',
 }
 
 enum RoutesEnum {
