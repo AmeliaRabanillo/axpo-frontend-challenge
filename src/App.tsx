@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
-import StartHeader from "./pages/start-page";
+import StartPage from "./pages/start-page";
 import DataTablePage from "./pages/data-table-page";
 import {RoutesEnum, SearchTypeEnum} from "./utils/constants";
 import ResultsPage from "./pages/results-page";
@@ -14,7 +14,7 @@ function App() {
         <ThemeProvider theme={baseTheme}>
             <GlobalStyle/>
             <Routes>
-                <Route path={RoutesEnum.START_PAGE} element={<StartHeader/>}/>
+                <Route path={RoutesEnum.START_PAGE} element={<StartPage/>}/>
 
                 <Route path={RoutesEnum.POPULATION_DENSITY_TABLE_PAGE}
                        element={<DataTablePage type={SearchTypeEnum.POP_DENSITY}/>}/>

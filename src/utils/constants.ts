@@ -5,7 +5,7 @@ enum SearchTypeEnum {
 
 const SEARCH_TYPE_DISPLAY_MAP = {
     [SearchTypeEnum.POP_DENSITY]: 'Population Density',
-    [SearchTypeEnum.DRONE_RES]: 'Drone Restriction'
+    [SearchTypeEnum.DRONE_RES]: 'Drone Restrictions'
 };
 
 
