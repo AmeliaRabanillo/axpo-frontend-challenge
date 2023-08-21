@@ -1,7 +1,13 @@
 enum SearchTypeEnum {
-    POPULATION_DENSITY = 'population_density',
-    DRONE_RESTRICTION = 'drone_restriction',
+    POP_DENSITY = 'population_density',
+    DRONE_RES = 'drone_restriction',
 }
+
+const SEARCH_TYPE_DISPLAY_MAP = {
+    [SearchTypeEnum.POP_DENSITY]: 'Population Density',
+    [SearchTypeEnum.DRONE_RES]: 'Drone Restriction'
+};
+
 
 enum RoutesEnum {
     START_PAGE = '/',
@@ -18,7 +24,7 @@ const MAP_SERVER_SR = '4326';
 export {
     SearchTypeEnum,
     RoutesEnum,
-
+    SEARCH_TYPE_DISPLAY_MAP,
     MAP_SERVER_URL,
     DRONE_RESTRICTIONS_LAYER,
     POPULATION_DENSITY_LAYER,

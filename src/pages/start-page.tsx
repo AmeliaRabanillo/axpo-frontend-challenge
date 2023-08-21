@@ -6,7 +6,8 @@ import Memory from "@mui/icons-material/Memory";
 import {PrimaryButton} from "../components/primary-button";
 import {H1, H2} from "../styled/headings";
 import React from "react";
-import { ButtonContainer } from "../components/button-container";
+import {ButtonContainer} from "../components/button-container";
+import {SEARCH_TYPE_DISPLAY_MAP} from "../utils/constants";
 
 
 // @ts-ignore
@@ -19,10 +20,10 @@ const StartPage = (props) => {
             <H2>Select what you want to search</H2>
             <ButtonContainer>
                 <PrimaryButton onClick={() => navigate('/population_density')}>
-                    <span>Population density</span>
+                    <span>{SEARCH_TYPE_DISPLAY_MAP['population_density']}</span>
                     <Groups/></PrimaryButton>
                 <PrimaryButton onClick={() => navigate('/drone_restriction',)}>
-                    <span>Drone description</span>
+                    <span>{SEARCH_TYPE_DISPLAY_MAP['drone_restriction']}</span>
                     <Memory/>
                 </PrimaryButton>
             </ButtonContainer>

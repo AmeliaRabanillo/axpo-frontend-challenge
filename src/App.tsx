@@ -17,14 +17,14 @@ function App() {
                 <Route path={RoutesEnum.START_PAGE} element={<StartHeader/>}/>
 
                 <Route path={RoutesEnum.POPULATION_DENSITY_TABLE_PAGE}
-                       element={<DataTablePage type={SearchTypeEnum.POPULATION_DENSITY}/>}/>
+                       element={<DataTablePage type={SearchTypeEnum.POP_DENSITY}/>}/>
                 <Route path={`/${RoutesEnum.POPULATION_DENSITY_TABLE_PAGE}/:id`}
-                       element={<ResultsPage type={SearchTypeEnum.POPULATION_DENSITY}/>}/>
+                       element={<ResultsPage type={SearchTypeEnum.POP_DENSITY}/>}/>
 
                 <Route path={RoutesEnum.DRONE_RESTRICTION_TABLE_PAGE}
-                       element={<DataTablePage type={SearchTypeEnum.DRONE_RESTRICTION}/>}/>
+                       element={<DataTablePage type={SearchTypeEnum.DRONE_RES}/>}/>
                 <Route path={`/${RoutesEnum.DRONE_RESTRICTION_TABLE_PAGE}/:id`}
-                       element={<ResultsPage type={SearchTypeEnum.DRONE_RESTRICTION}/>}/>
+                       element={<ResultsPage type={SearchTypeEnum.DRONE_RES}/>}/>
             </Routes>
         </ThemeProvider>
     );

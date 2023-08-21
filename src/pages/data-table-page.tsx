@@ -1,7 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import * as React from 'react';
 import {DataGrid, GridColDef, GridRowSelectionModel} from '@mui/x-data-grid';
-import {SearchTypeEnum} from "../utils/constants";
+import {SEARCH_TYPE_DISPLAY_MAP, SearchTypeEnum} from "../utils/constants";
 import {Radio} from "@mui/material";
 import {TABLE_DATA} from "../utils/table_data_constant";
 import Search from "@mui/icons-material/Search";
@@ -12,8 +12,16 @@ import BackButton from "../components/back-button";
 import HeaderContainer from "../components/header-container";
 
 export type tableProps = {
-    type: SearchTypeEnum,
+    type: SearchTypeEnum;
 }//ToDo put types in types file
+
+export type rowType = {
+    latitude: string;
+    longitude: string;
+    name: string;
+    type: string;
+    id: string;
+}
 
 const DataTablePage = (props: tableProps) => {
     const {type} = props;
@@ -27,7 +35,7 @@ const DataTablePage = (props: tableProps) => {
         {field: 'longitude', headerName: 'Longitude', flex: 1,},
     ];
 
-    const rows = TABLE_DATA.map(row => {
+    const rows: rowType[] = TABLE_DATA.map(row => {
         return {
             id: row[0],
             name: row[1],
@@ -48,6 +56,9 @@ const DataTablePage = (props: tableProps) => {
                 state: {
                     latitude: selectedRow.latitude,
                     longitude: selectedRow.longitude,
+                    name: selectedRow.name,
+                    type: selectedRow.type,
+                    id: selectedRow.id,
                 }
             });
     }
@@ -66,7 +77,7 @@ const DataTablePage = (props: tableProps) => {
         <div>
             <HeaderContainer>
                 <BackButton goToUrl={'/'}/>
-                <H2>Selected {type}</H2>
+                <H2>Selected {SEARCH_TYPE_DISPLAY_MAP[type]}</H2>
             </HeaderContainer>
 
             <DataGrid
@@ -74,10 +85,10 @@ const DataTablePage = (props: tableProps) => {
                 columns={columns}
                 initialState={{
                     pagination: {
-                        paginationModel: {page: 0, pageSize: 10},
+                        paginationModel: {page: 0, pageSize: 5},
                     },
                 }}
-                pageSizeOptions={[10, 15, 20]}
+                pageSizeOptions={[5, 10, 15, 20]}
                 rowSelectionModel={selectionModel}
                 onRowSelectionModelChange={(newSelectionModel) => {
                     setSelectionModel(newSelectionModel)
