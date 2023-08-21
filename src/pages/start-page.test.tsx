@@ -1,9 +1,9 @@
 import React from 'react'
 import 'jest-styled-components';
-import StartPage from "../../pages/start-page";
+import StartPage from "./start-page";
 import {ThemeProvider} from "styled-components";
-import {baseTheme} from "../../styled/themes/base-theme";
-import {RoutesEnum, SEARCH_TYPE_DISPLAY_MAP} from "../../utils/constants";
+import {baseTheme} from "../styled/themes/base-theme";
+import {RoutesEnum, SEARCH_TYPE_DISPLAY_MAP} from "../utils/constants";
 import {fireEvent, render} from "@testing-library/react";
 import {screen} from '@testing-library/dom'
 
