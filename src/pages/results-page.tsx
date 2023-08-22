@@ -1,4 +1,5 @@
-import {rowType, tableProps} from "./data-table-page";
+import {rowType} from "../common/types/row";
+import {tableProps} from "../common/types/table-props";
 import {useLocation} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import {SEARCH_TYPE_DISPLAY_MAP, SearchTypeEnum} from "../utils/constants";

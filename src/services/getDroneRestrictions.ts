@@ -14,7 +14,7 @@ const getDroneRestrictions = (queryParams: { latitude: string, longitude: string
                     lang: 'en',
                     returnGeometry: 'false',
                     tolerance: '0',
-                    geometry: `{'x': ${longitude}, 'y': ${latitude}}`,
+                    geometry: `{"x": ${longitude}, "y": ${latitude}}`,
                 }
             })
             .then(response => res(response.data))

@@ -3,11 +3,11 @@ import {CircularButton} from "./circular-button";
 import * as React from "react";
 import {useNavigate} from "react-router-dom";
 
-interface BackButtonProps {
+type backButtonProps = {
     goToUrl: string;
-}//ToDo add props to types file
+}
 
-const BackButton = (props: BackButtonProps) => {
+const BackButton = (props: backButtonProps) => {
     const {goToUrl} = props
 
     const navigate = useNavigate();

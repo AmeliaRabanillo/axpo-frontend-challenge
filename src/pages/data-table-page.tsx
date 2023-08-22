@@ -10,18 +10,9 @@ import {H2} from "../styled/headings";
 import {ButtonContainer} from "../components/button-container";
 import BackButton from "../components/back-button";
 import HeaderContainer from "../components/header-container";
+import { tableProps } from "../common/types/table-props";
+import { rowType } from "../common/types/row";
 
-export type tableProps = {
-    type: SearchTypeEnum;
-}//ToDo put types in types file
-
-export type rowType = {
-    latitude: string;
-    longitude: string;
-    name: string;
-    type: string;
-    id: string;
-}
 
 const DataTablePage = (props: tableProps) => {
     const {type} = props;
@@ -69,10 +60,9 @@ const DataTablePage = (props: tableProps) => {
         width: 80,
         sortable: false,
         renderCell: (params) =>
-            (<Radio checked={selectionModel[0] === params.id} value={params.id}/>)//ToDO change radio button color
+            (<Radio checked={selectionModel[0] === params.id} value={params.id}/>)
     });
 
-    //ToDO remove cell outline when selecting row
     return (
         <div>
             <HeaderContainer>
@@ -94,6 +84,7 @@ const DataTablePage = (props: tableProps) => {
                     setSelectionModel(newSelectionModel)
                 }}
                 hideFooterSelectedRowCount={true}
+
             />
             <ButtonContainer>
                 <PrimaryButton onClick={handleClick}><span>Search</span><Search/></PrimaryButton>

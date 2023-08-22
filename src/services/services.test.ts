@@ -38,7 +38,7 @@ describe("getDroneRestrictions service tests", () => {
         expect(mockAxios.get).toHaveBeenCalledTimes(1);
         expect(mockAxios.get).toHaveBeenCalledWith(MAP_SERVER_URL, {
             "params": {
-                "geometry": "{'x': 2, 'y': 1}",
+                "geometry": '{"x": 2, "y": 1}',
                 "geometryType": "esriGeometryPoint",
                 "lang": "en",
                 "layers": layer,
@@ -51,22 +51,6 @@ describe("getDroneRestrictions service tests", () => {
 
     // @ts-ignore
     const testRejectService = (serviceFunc, layer: string) => {
-        const fakeResponse = {
-            results:
-                [{
-                    "layerBodId": layer,
-                    "layerName": "Population (residents)",
-                    "featureId": 4625514,
-                    "id": 4625514,
-                    "attributes": {
-                        "number": 7,
-                        "i_year": 2010,
-                        "reli": 75602210,
-                        "label": 75602210
-                    }
-                },
-                ]
-        }
         const fakeError = new TypeError('this is a fake error');
         // @ts-ignore
         mockAxios.get.mockImplementationOnce(() => new Promise((res, rej) => rej(fakeError)));
@@ -82,7 +66,7 @@ describe("getDroneRestrictions service tests", () => {
         expect(mockAxios.get).toHaveBeenCalledTimes(1);
         expect(mockAxios.get).toHaveBeenCalledWith(MAP_SERVER_URL, {
             "params": {
-                "geometry": "{'x': 2, 'y': 1}",
+                "geometry": '{"x": 2, "y": 1}',
                 "geometryType": "esriGeometryPoint",
                 "lang": "en",
                 "layers": layer,
