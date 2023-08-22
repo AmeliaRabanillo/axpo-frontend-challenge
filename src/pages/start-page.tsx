@@ -1,6 +1,4 @@
 import {useNavigate} from "react-router-dom";
-// @ts-ignore
-import styled from "styled-components";
 import Groups from "@mui/icons-material/Groups";
 import Memory from "@mui/icons-material/Memory";
 import {PrimaryButton} from "../components/primary-button";

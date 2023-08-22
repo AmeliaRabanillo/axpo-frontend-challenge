@@ -1,0 +1,1209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result page tests Result Page for drone restrictions matches snapshot 1`] = `
+.c1 {
+  color: #f5e9d2;
+  background-color: #ff5d64;
+  font-size: 16px;
+  margin: 20px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.c1 span {
+  margin-right: 12px;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c2 {
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 0;
+}
+
+.c3 {
+  color: #3d3d3d;
+  font-size: 32px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  color: #3d3d3d;
+  margin: 8px 0;
+}
+
+<div>
+  <div>
+    <div
+      class="c0"
+    >
+      <button
+        class="c1 c2"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="KeyboardBackspaceIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
+          />
+        </svg>
+      </button>
+      <h2
+        class="c3"
+      >
+        Here are your results for 
+        Drone Restrictions
+      </h2>
+    </div>
+    <p
+      class="c4"
+    >
+      <b>
+        Id:
+      </b>
+       
+      1
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Name:
+      </b>
+       
+      fake-name
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Type:
+      </b>
+       
+      fake-type
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Latitude:
+      </b>
+       
+      2
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Longitude:
+      </b>
+       
+      3
+    </p>
+    <div
+      class="_2IvMF _GzYRV"
+    >
+      <div
+        class="_2bkNM"
+        role="list"
+      >
+        <span
+          class="_16FAf _f10Tu _1MFti"
+          role="button"
+          tabindex="0"
+        >
+          ▾
+        </span>
+        <span
+          class="_3uHL6 _3eOF8"
+        >
+          {
+        </span>
+        <div>
+          <div
+            class="_2bkNM"
+            role="list"
+          >
+            <span
+              class="_16FAf _f10Tu _1MFti"
+              role="button"
+              tabindex="0"
+            >
+              ▾
+            </span>
+            <span
+              class="_1MGIk"
+            >
+              results
+              :
+            </span>
+            <span
+              class="_3uHL6 _3eOF8"
+            >
+              [
+            </span>
+            <div>
+              <div
+                class="_2bkNM"
+                role="list"
+              >
+                <span
+                  class="_16FAf _f10Tu _1MFti"
+                  role="button"
+                  tabindex="0"
+                >
+                  ▾
+                </span>
+                <span
+                  class="_3uHL6 _3eOF8"
+                >
+                  {
+                </span>
+                <div>
+                  <div
+                    class="_2bkNM"
+                    role="listitem"
+                  >
+                    <span
+                      class="_1MGIk"
+                    >
+                      layerBodId
+                      :
+                    </span>
+                    <span
+                      class="_vGjyY"
+                    >
+                      "all:ch.bazl.einschraenkungen-drohnen"
+                    </span>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      ,
+                    </span>
+                  </div>
+                  <div
+                    class="_2bkNM"
+                    role="listitem"
+                  >
+                    <span
+                      class="_1MGIk"
+                    >
+                      layerName
+                      :
+                    </span>
+                    <span
+                      class="_vGjyY"
+                    >
+                      "Population (residents)"
+                    </span>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      ,
+                    </span>
+                  </div>
+                  <div
+                    class="_2bkNM"
+                    role="listitem"
+                  >
+                    <span
+                      class="_1MGIk"
+                    >
+                      featureId
+                      :
+                    </span>
+                    <span
+                      class="_1bQdo"
+                    >
+                      4625514
+                    </span>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      ,
+                    </span>
+                  </div>
+                  <div
+                    class="_2bkNM"
+                    role="listitem"
+                  >
+                    <span
+                      class="_1MGIk"
+                    >
+                      id
+                      :
+                    </span>
+                    <span
+                      class="_1bQdo"
+                    >
+                      4625514
+                    </span>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      ,
+                    </span>
+                  </div>
+                  <div
+                    class="_2bkNM"
+                    role="list"
+                  >
+                    <span
+                      class="_16FAf _f10Tu _1MFti"
+                      role="button"
+                      tabindex="0"
+                    >
+                      ▾
+                    </span>
+                    <span
+                      class="_1MGIk"
+                    >
+                      attributes
+                      :
+                    </span>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      {
+                    </span>
+                    <div>
+                      <div
+                        class="_2bkNM"
+                        role="listitem"
+                      >
+                        <span
+                          class="_1MGIk"
+                        >
+                          number
+                          :
+                        </span>
+                        <span
+                          class="_1bQdo"
+                        >
+                          7
+                        </span>
+                        <span
+                          class="_3uHL6 _3eOF8"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        class="_2bkNM"
+                        role="listitem"
+                      >
+                        <span
+                          class="_1MGIk"
+                        >
+                          i_year
+                          :
+                        </span>
+                        <span
+                          class="_1bQdo"
+                        >
+                          2010
+                        </span>
+                        <span
+                          class="_3uHL6 _3eOF8"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        class="_2bkNM"
+                        role="listitem"
+                      >
+                        <span
+                          class="_1MGIk"
+                        >
+                          reli
+                          :
+                        </span>
+                        <span
+                          class="_1bQdo"
+                        >
+                          75602210
+                        </span>
+                        <span
+                          class="_3uHL6 _3eOF8"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        class="_2bkNM"
+                        role="listitem"
+                      >
+                        <span
+                          class="_1MGIk"
+                        >
+                          label
+                          :
+                        </span>
+                        <span
+                          class="_1bQdo"
+                        >
+                          75602210
+                        </span>
+                      </div>
+                    </div>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      }
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="_3uHL6 _3eOF8"
+                >
+                  }
+                </span>
+              </div>
+            </div>
+            <span
+              class="_3uHL6 _3eOF8"
+            >
+              ]
+            </span>
+          </div>
+        </div>
+        <span
+          class="_3uHL6 _3eOF8"
+        >
+          }
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Result page tests Result Page for drone restrictions service errors matches snapshot 1`] = `
+.c1 {
+  color: #f5e9d2;
+  background-color: #ff5d64;
+  font-size: 16px;
+  margin: 20px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.c1 span {
+  margin-right: 12px;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c2 {
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 0;
+}
+
+.c3 {
+  color: #3d3d3d;
+  font-size: 32px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  color: #3d3d3d;
+  margin: 8px 0;
+}
+
+<div>
+  <div>
+    <div
+      class="c0"
+    >
+      <button
+        class="c1 c2"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="KeyboardBackspaceIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
+          />
+        </svg>
+      </button>
+      <h2
+        class="c3"
+      >
+        Here are your results for 
+        Drone Restrictions
+      </h2>
+    </div>
+    <p
+      class="c4"
+    >
+      <b>
+        Id:
+      </b>
+       
+      1
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Name:
+      </b>
+       
+      fake-name
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Type:
+      </b>
+       
+      fake-type
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Latitude:
+      </b>
+       
+      2
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Longitude:
+      </b>
+       
+      3
+    </p>
+    <p>
+      This is a random error
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Result page tests Result Page for population density matches snapshot 1`] = `
+.c1 {
+  color: #f5e9d2;
+  background-color: #ff5d64;
+  font-size: 16px;
+  margin: 20px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.c1 span {
+  margin-right: 12px;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c2 {
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 0;
+}
+
+.c3 {
+  color: #3d3d3d;
+  font-size: 32px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  color: #3d3d3d;
+  margin: 8px 0;
+}
+
+<div>
+  <div>
+    <div
+      class="c0"
+    >
+      <button
+        class="c1 c2"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="KeyboardBackspaceIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
+          />
+        </svg>
+      </button>
+      <h2
+        class="c3"
+      >
+        Here are your results for 
+        Population Density
+      </h2>
+    </div>
+    <p
+      class="c4"
+    >
+      <b>
+        Id:
+      </b>
+       
+      1
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Name:
+      </b>
+       
+      fake-name
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Type:
+      </b>
+       
+      fake-type
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Latitude:
+      </b>
+       
+      2
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Longitude:
+      </b>
+       
+      3
+    </p>
+    <div
+      class="_2IvMF _GzYRV"
+    >
+      <div
+        class="_2bkNM"
+        role="list"
+      >
+        <span
+          class="_16FAf _f10Tu _1MFti"
+          role="button"
+          tabindex="0"
+        >
+          ▾
+        </span>
+        <span
+          class="_3uHL6 _3eOF8"
+        >
+          {
+        </span>
+        <div>
+          <div
+            class="_2bkNM"
+            role="list"
+          >
+            <span
+              class="_16FAf _f10Tu _1MFti"
+              role="button"
+              tabindex="0"
+            >
+              ▾
+            </span>
+            <span
+              class="_1MGIk"
+            >
+              results
+              :
+            </span>
+            <span
+              class="_3uHL6 _3eOF8"
+            >
+              [
+            </span>
+            <div>
+              <div
+                class="_2bkNM"
+                role="list"
+              >
+                <span
+                  class="_16FAf _f10Tu _1MFti"
+                  role="button"
+                  tabindex="0"
+                >
+                  ▾
+                </span>
+                <span
+                  class="_3uHL6 _3eOF8"
+                >
+                  {
+                </span>
+                <div>
+                  <div
+                    class="_2bkNM"
+                    role="listitem"
+                  >
+                    <span
+                      class="_1MGIk"
+                    >
+                      layerBodId
+                      :
+                    </span>
+                    <span
+                      class="_vGjyY"
+                    >
+                      "all:ch.bazl.einschraenkungen-drohnen"
+                    </span>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      ,
+                    </span>
+                  </div>
+                  <div
+                    class="_2bkNM"
+                    role="listitem"
+                  >
+                    <span
+                      class="_1MGIk"
+                    >
+                      layerName
+                      :
+                    </span>
+                    <span
+                      class="_vGjyY"
+                    >
+                      "Population (residents)"
+                    </span>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      ,
+                    </span>
+                  </div>
+                  <div
+                    class="_2bkNM"
+                    role="listitem"
+                  >
+                    <span
+                      class="_1MGIk"
+                    >
+                      featureId
+                      :
+                    </span>
+                    <span
+                      class="_1bQdo"
+                    >
+                      4625514
+                    </span>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      ,
+                    </span>
+                  </div>
+                  <div
+                    class="_2bkNM"
+                    role="listitem"
+                  >
+                    <span
+                      class="_1MGIk"
+                    >
+                      id
+                      :
+                    </span>
+                    <span
+                      class="_1bQdo"
+                    >
+                      4625514
+                    </span>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      ,
+                    </span>
+                  </div>
+                  <div
+                    class="_2bkNM"
+                    role="list"
+                  >
+                    <span
+                      class="_16FAf _f10Tu _1MFti"
+                      role="button"
+                      tabindex="0"
+                    >
+                      ▾
+                    </span>
+                    <span
+                      class="_1MGIk"
+                    >
+                      attributes
+                      :
+                    </span>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      {
+                    </span>
+                    <div>
+                      <div
+                        class="_2bkNM"
+                        role="listitem"
+                      >
+                        <span
+                          class="_1MGIk"
+                        >
+                          number
+                          :
+                        </span>
+                        <span
+                          class="_1bQdo"
+                        >
+                          7
+                        </span>
+                        <span
+                          class="_3uHL6 _3eOF8"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        class="_2bkNM"
+                        role="listitem"
+                      >
+                        <span
+                          class="_1MGIk"
+                        >
+                          i_year
+                          :
+                        </span>
+                        <span
+                          class="_1bQdo"
+                        >
+                          2010
+                        </span>
+                        <span
+                          class="_3uHL6 _3eOF8"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        class="_2bkNM"
+                        role="listitem"
+                      >
+                        <span
+                          class="_1MGIk"
+                        >
+                          reli
+                          :
+                        </span>
+                        <span
+                          class="_1bQdo"
+                        >
+                          75602210
+                        </span>
+                        <span
+                          class="_3uHL6 _3eOF8"
+                        >
+                          ,
+                        </span>
+                      </div>
+                      <div
+                        class="_2bkNM"
+                        role="listitem"
+                      >
+                        <span
+                          class="_1MGIk"
+                        >
+                          label
+                          :
+                        </span>
+                        <span
+                          class="_1bQdo"
+                        >
+                          75602210
+                        </span>
+                      </div>
+                    </div>
+                    <span
+                      class="_3uHL6 _3eOF8"
+                    >
+                      }
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="_3uHL6 _3eOF8"
+                >
+                  }
+                </span>
+              </div>
+            </div>
+            <span
+              class="_3uHL6 _3eOF8"
+            >
+              ]
+            </span>
+          </div>
+        </div>
+        <span
+          class="_3uHL6 _3eOF8"
+        >
+          }
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Result page tests Result Page for population density service errors matches snapshot 1`] = `
+.c1 {
+  color: #f5e9d2;
+  background-color: #ff5d64;
+  font-size: 16px;
+  margin: 20px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.c1 span {
+  margin-right: 12px;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c2 {
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 0;
+}
+
+.c3 {
+  color: #3d3d3d;
+  font-size: 32px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  color: #3d3d3d;
+  margin: 8px 0;
+}
+
+<div>
+  <div>
+    <div
+      class="c0"
+    >
+      <button
+        class="c1 c2"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="KeyboardBackspaceIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
+          />
+        </svg>
+      </button>
+      <h2
+        class="c3"
+      >
+        Here are your results for 
+        Population Density
+      </h2>
+    </div>
+    <p
+      class="c4"
+    >
+      <b>
+        Id:
+      </b>
+       
+      1
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Name:
+      </b>
+       
+      fake-name
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Type:
+      </b>
+       
+      fake-type
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Latitude:
+      </b>
+       
+      2
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Longitude:
+      </b>
+       
+      3
+    </p>
+    <p>
+      This is a random error
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Result page tests Result Page with unknown search type matches snapshot 1`] = `
+.c1 {
+  color: #f5e9d2;
+  background-color: #ff5d64;
+  font-size: 16px;
+  margin: 20px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.c1 span {
+  margin-right: 12px;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c2 {
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 0;
+}
+
+.c3 {
+  color: #3d3d3d;
+  font-size: 32px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  color: #3d3d3d;
+  margin: 8px 0;
+}
+
+<div>
+  <div>
+    <div
+      class="c0"
+    >
+      <button
+        class="c1 c2"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="KeyboardBackspaceIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
+          />
+        </svg>
+      </button>
+      <h2
+        class="c3"
+      >
+        Here are your results for 
+      </h2>
+    </div>
+    <p
+      class="c4"
+    >
+      <b>
+        Id:
+      </b>
+       
+      1
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Name:
+      </b>
+       
+      fake-name
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Type:
+      </b>
+       
+      fake-type
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Latitude:
+      </b>
+       
+      2
+    </p>
+    <p
+      class="c4"
+    >
+      <b>
+        Longitude:
+      </b>
+       
+      3
+    </p>
+    <p>
+      Unknown type to search
+    </p>
+  </div>
+</div>
+`;

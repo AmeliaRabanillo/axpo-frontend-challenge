@@ -7,21 +7,19 @@ import 'react-json-view-lite/dist/index.css';
 import getDroneRestrictions from "../services/getDroneRestrictions";
 import getPopulationDensity from "../services/getPopulationDensity";
 import BackButton from "../components/back-button";
-import {H2, H3} from "../styled/headings";
+import {H2} from "../styled/headings";
 import HeaderContainer from "../components/header-container";
 import P from "../styled/p";
 
 const ResultsPage = (props: tableProps) => {
     const {type} = props;
     const location = useLocation();
-    const state = location.state as rowType
-    console.log(state)
+    const state = location.state as rowType;
 
     const [data, setData] = useState<any>({});//ToDo maybe useMemo here
     const [errorMsg, setErrorMsg] = useState('');
 
     useEffect(() => {
-        //ToDo handle errors
         if (type === SearchTypeEnum.DRONE_RES)
             getDroneRestrictions({
                 latitude: state.latitude,
@@ -48,6 +46,10 @@ const ResultsPage = (props: tableProps) => {
                     alert(err.message);
                     setErrorMsg(err.message);
                 });
+        else {
+            alert('Unknown type to search');
+            setErrorMsg('Unknown type to search');
+        }
     }, []);
 
     return (
