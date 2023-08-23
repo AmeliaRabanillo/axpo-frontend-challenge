@@ -5,8 +5,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 64px;
 
-    ${mediaQueries.lessThan("small")`   
-      margin: 64px 32px;
+    ${mediaQueries.lessThan("medium")`   
+    margin:0;
+      .main-container {
+          margin: 32px;
+      }
     `};
   }
 `;

@@ -5,7 +5,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  ${mediaQueries.lessThan("small")`   
+  ${mediaQueries.lessThan("medium")`   
     flex-direction: column;
 
     button {

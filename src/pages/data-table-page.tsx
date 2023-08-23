@@ -64,7 +64,7 @@ const DataTablePage = (props: tableProps) => {
     });
 
     return (
-        <div>
+        <div className='main-container'>
             <HeaderContainer>
                 <BackButton goToUrl={'/'}/>
                 <H2>Selected {SEARCH_TYPE_DISPLAY_MAP[type]}</H2>

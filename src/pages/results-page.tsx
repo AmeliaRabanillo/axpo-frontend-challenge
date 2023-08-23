@@ -17,7 +17,7 @@ const ResultsPage = (props: tableProps) => {
     const location = useLocation();
     const state = location.state as rowType;
 
-    const [data, setData] = useState<any>({});//ToDo maybe useMemo here
+    const [data, setData] = useState<any>({});
     const [errorMsg, setErrorMsg] = useState('');
 
     useEffect(() => {
@@ -54,7 +54,7 @@ const ResultsPage = (props: tableProps) => {
     }, []);
 
     return (
-        <div>
+        <div className='main-container'>
             <HeaderContainer>
                 <BackButton goToUrl={`/${type}`}/>
                 <H2>Here are your results for {SEARCH_TYPE_DISPLAY_MAP[type]}</H2>
