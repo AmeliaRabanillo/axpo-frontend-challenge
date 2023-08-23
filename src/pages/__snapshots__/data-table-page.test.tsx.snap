@@ -60,7 +60,7 @@ exports[`Start Page tests Data table Page matches snapshot 1`] = `
   align-items: center;
 }
 
-@media (max-width:576px) {
+@media (max-width:768px) {
   .c4 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -74,7 +74,9 @@ exports[`Start Page tests Data table Page matches snapshot 1`] = `
 }
 
 <div>
-  <div>
+  <div
+    class="main-container"
+  >
     <div
       class="c0"
     >

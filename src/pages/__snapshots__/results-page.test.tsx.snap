@@ -55,7 +55,9 @@ exports[`Result page tests Result Page for drone restrictions matches snapshot 1
 }
 
 <div>
-  <div>
+  <div
+    class="main-container"
+  >
     <div
       class="c0"
     >
@@ -460,7 +462,9 @@ exports[`Result page tests Result Page for drone restrictions service errors mat
 }
 
 <div>
-  <div>
+  <div
+    class="main-container"
+  >
     <div
       class="c0"
     >
@@ -593,7 +597,9 @@ exports[`Result page tests Result Page for population density matches snapshot 1
 }
 
 <div>
-  <div>
+  <div
+    class="main-container"
+  >
     <div
       class="c0"
     >
@@ -998,7 +1004,9 @@ exports[`Result page tests Result Page for population density service errors mat
 }
 
 <div>
-  <div>
+  <div
+    class="main-container"
+  >
     <div
       class="c0"
     >
@@ -1131,7 +1139,9 @@ exports[`Result page tests Result Page with unknown search type matches snapshot
 }
 
 <div>
-  <div>
+  <div
+    class="main-container"
+  >
     <div
       class="c0"
     >
