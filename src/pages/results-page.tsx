@@ -1,6 +1,6 @@
 import {rowType} from "../common/types/row";
 import {tableProps} from "../common/types/table-props";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import React, {useEffect, useState} from "react";
 import {SEARCH_TYPE_DISPLAY_MAP, SearchTypeEnum} from "../utils/constants";
 import {JsonView, allExpanded, defaultStyles} from 'react-json-view-lite';
@@ -15,12 +15,18 @@ import P from "../styled/p";
 const ResultsPage = (props: tableProps) => {
     const {type} = props;
     const location = useLocation();
-    const state = location.state as rowType;
+    let state = location.state as rowType;
+    const navigate = useNavigate();
 
     const [data, setData] = useState<any>({});
     const [errorMsg, setErrorMsg] = useState('');
 
     useEffect(() => {
+        if (!state) {
+            navigate('/404');
+            return;
+        }
+
         if (type === SearchTypeEnum.DRONE_RES)
             getDroneRestrictions({
                 latitude: state.latitude,
@@ -51,7 +57,7 @@ const ResultsPage = (props: tableProps) => {
             alert('Unknown type to search');
             setErrorMsg('Unknown type to search');
         }
-    }, []);
+    }, [state, navigate, type]);
 
     return (
         <div className='main-container'>
@@ -59,11 +65,14 @@ const ResultsPage = (props: tableProps) => {
                 <BackButton goToUrl={`/${type}`}/>
                 <H2>Here are your results for {SEARCH_TYPE_DISPLAY_MAP[type]}</H2>
             </HeaderContainer>
-            <P><b>Id:</b> {state.id}</P>
-            <P><b>Name:</b> {state.name}</P>
-            <P><b>Type:</b> {state.type}</P>
-            <P><b>Latitude:</b> {state.latitude}</P>
-            <P><b>Longitude:</b> {state.longitude}</P>
+            {state && (<>
+                    <P><b>Id:</b> {state.id}</P>
+                    <P><b>Name:</b> {state.name}</P>
+                    <P><b>Type:</b> {state.type}</P>
+                    <P><b>Latitude:</b> {state.latitude}</P>
+                    <P><b>Longitude:</b> {state.longitude}</P>
+                </>
+            )}
             {errorMsg
                 ? <p>{errorMsg}</p>
                 : <JsonView data={data} shouldInitiallyExpand={allExpanded} style={defaultStyles}/>}

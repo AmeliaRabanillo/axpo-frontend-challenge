@@ -7,12 +7,14 @@ import ResultsPage from "./pages/results-page";
 import {ThemeProvider} from "styled-components";
 import {baseTheme} from "./styled/themes/base-theme";
 import GlobalStyle from "./styled/global-styles";
+import NotFound from "./pages/404";
 
 function App() {
     return (
         <ThemeProvider theme={baseTheme}>
             <GlobalStyle/>
             <Routes>
+                <Route path='*' element={<NotFound />}/>
                 <Route path={RoutesEnum.START_PAGE} element={<StartPage/>}/>
 
                 <Route path={RoutesEnum.POPULATION_DENSITY_TABLE_PAGE}
