@@ -1,12 +1,13 @@
-import React from 'react'
 import getDroneRestrictions from "./getDroneRestrictions";
 import mockAxios from 'jest-mock-axios';
 import getPopulationDensity from "./getPopulationDensity";
 import {DRONE_RESTRICTIONS_LAYER, MAP_SERVER_URL, POPULATION_DENSITY_LAYER} from "../utils/constants";
 
 describe("getDroneRestrictions service tests", () => {
-    // @ts-ignore
-    const testResolveService = (serviceFunc, layer: string) => {
+    const testResolveService = (serviceFunc: (queryParams: {
+        latitude: string,
+        longitude: string
+    }) => Promise<unknown>, layer: string) => {
         const fakeResponse = {
             results:
                 [{
@@ -29,7 +30,6 @@ describe("getDroneRestrictions service tests", () => {
         serviceFunc({
             latitude: '1',
             longitude: '2'
-            // @ts-ignore
         }).then((data) => {
             expect(data).toEqual(fakeResponse);
 

@@ -1,7 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import * as React from 'react';
 import {DataGrid, GridColDef, GridRowSelectionModel} from '@mui/x-data-grid';
-import {SEARCH_TYPE_DISPLAY_MAP, SearchTypeEnum} from "../utils/constants";
+import {SEARCH_TYPE_DISPLAY_MAP} from "../utils/constants";
 import {Radio} from "@mui/material";
 import {TABLE_DATA} from "../utils/table_data_constant";
 import Search from "@mui/icons-material/Search";

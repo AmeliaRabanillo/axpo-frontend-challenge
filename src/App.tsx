@@ -4,7 +4,6 @@ import StartPage from "./pages/start-page";
 import DataTablePage from "./pages/data-table-page";
 import {RoutesEnum, SearchTypeEnum} from "./utils/constants";
 import ResultsPage from "./pages/results-page";
-// @ts-ignore
 import {ThemeProvider} from "styled-components";
 import {baseTheme} from "./styled/themes/base-theme";
 import GlobalStyle from "./styled/global-styles";
