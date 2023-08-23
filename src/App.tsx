@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Route, Routes} from "react-router-dom";
+import StartPage from "./pages/start-page";
+import DataTablePage from "./pages/data-table-page";
+import {RoutesEnum, SearchTypeEnum} from "./utils/constants";
+import ResultsPage from "./pages/results-page";
+import {ThemeProvider} from "styled-components";
+import {baseTheme} from "./styled/themes/base-theme";
+import GlobalStyle from "./styled/global-styles";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ThemeProvider theme={baseTheme}>
+            <GlobalStyle/>
+            <Routes>
+                <Route path={RoutesEnum.START_PAGE} element={<StartPage/>}/>
+
+                <Route path={RoutesEnum.POPULATION_DENSITY_TABLE_PAGE}
+                       element={<DataTablePage type={SearchTypeEnum.POP_DENSITY}/>}/>
+                <Route path={`/${RoutesEnum.POPULATION_DENSITY_TABLE_PAGE}/:id`}
+                       element={<ResultsPage type={SearchTypeEnum.POP_DENSITY}/>}/>
+
+                <Route path={RoutesEnum.DRONE_RESTRICTION_TABLE_PAGE}
+                       element={<DataTablePage type={SearchTypeEnum.DRONE_RES}/>}/>
+                <Route path={`/${RoutesEnum.DRONE_RESTRICTION_TABLE_PAGE}/:id`}
+                       element={<ResultsPage type={SearchTypeEnum.DRONE_RES}/>}/>
+            </Routes>
+        </ThemeProvider>
+    );
 }
 
 export default App;
